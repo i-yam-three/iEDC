@@ -1,0 +1,1259 @@
+ <!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+	<!-- meta character set -->
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine or request Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>IEDC STM | Innovation & Entrepreneurship Development Centre</title>
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- theme meta -->
+  <meta name="theme-name" content="" />
+
+	<!-- CSS
+		================================================== -->
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
+
+	<!-- Fontawesome Icon font -->
+	<link rel="stylesheet" href="plugins/font-awesome.min.css">
+	<!-- Ion Icons Font -->
+	<link rel="stylesheet" href="plugins/ionicons.min.css">
+	<!-- bootstrap.min -->
+	<link rel="stylesheet" href="plugins/jquery.fancybox.css">
+	<!-- bootstrap.min -->
+	<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+	<!-- bootstrap.min -->
+	<link rel="stylesheet" href="plugins/owl.carousel.css">
+	<!-- bootstrap.min -->
+	<link rel="stylesheet" href="plugins/slit-slider.css">
+	<!-- bootstrap.min -->
+	<link rel="stylesheet" href="plugins/animate.css">
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="css/style.scss"> -->
+
+	<!-- Modernizer Script for old Browsers -->
+	<script src="plugins/modernizr-2.6.2.min.js"></script>
+
+	<link rel="stylesheet" href="style.css">
+
+    <!--Tailwind CSS-->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+	<!-- <style type="text/tailwindcss">
+        @layer components {
+
+          .card {
+            @apply flex items-center justify-center flex-col gap-2 p-5 w-full sm:w-72 h-full bg-gray-100 border rounded-2xl;
+			width: 20rem;
+			height: 20rem;
+          }
+
+        }
+    </style> -->
+    <!--Tailwind CSS-->
+
+    <!--Font-Awesome-->
+    <!-- <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    /> -->
+<style>
+	
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.team, .userProfile {
+  display: flex;
+}
+
+:root {
+  --userthumb: 75px;
+  --arrowSize: 15px;
+}
+
+
+
+.userProfile {
+  flex-wrap: wrap;
+  align-items: center;
+}
+.userProfile__thumbnail {
+  width: var(--userthumb, 75px);
+  height: var(--userthumb, 75px);
+  flex: 0 0 auto;
+  background-color: #f1f1f1;
+  margin: 0px;
+  padding: 0px;
+}
+.userProfile__image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.team {
+  padding: 0px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+@media (max-width: 480px) {
+  .team {
+    justify-content: center;
+  }
+}
+.team__members {
+  position: relative;
+  padding: 1rem;
+  display: none;
+  margin-bottom: calc(var(--userthumb) + var(--arrowSize)*2 );
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  filter: grayscale(1);
+}
+@media (min-width: 480px) {
+  .team__members {
+    padding: 1rem;
+    display: inline-block;
+    flex: 0 0 20%;
+    margin: 0px;
+  }
+}
+.team__members:nth-child(9n+6), .team__members:nth-child(9n+7), .team__members:nth-child(9n+8), .team__members:nth-child(9n+9) {
+  left: auto;
+}
+@media (min-width: 480px) {
+  .team__members:nth-child(9n+6), .team__members:nth-child(9n+7), .team__members:nth-child(9n+8), .team__members:nth-child(9n+9) {
+    left: 10%;
+  }
+}
+.team__members:nth-child(9n+9) {
+  margin: 0px;
+}
+@media (min-width: 480px) {
+  .team__members:nth-child(9n+9) {
+    margin-right: 10%;
+  }
+}
+.team__members .userProfile {
+  justify-content: center;
+  position: absolute;
+  top: calc(100% + var(--arrowSize));
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+@media (min-width: 480px) {
+  .team__members .userProfile {
+    position: static;
+  }
+}
+.team__members .userProfile__thumbnail {
+  position: relative;
+}
+.team__members .userProfile__thumbnail:after {
+  content: " ";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: var(--userthumb, 50px);
+  height: var(--userthumb, 50px);
+  transform: translate(-50%, -50%) scale(0);
+  background: linear-gradient(90deg, #fff, #f19066);
+  background-size: 400% 400%;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.3s linear;
+}
+.team__members:hover, .team__members.team__members--show {
+  filter: grayscale(0);
+  display: inline-block;
+}
+@media (min-width: 480px) {
+  .team__members:hover .team__details, .team__members.team__members--show .team__details {
+    transform: translateX(-50%) scale(1, 1);
+  }
+}
+.team__members:hover .userProfile__thumbnail:after, .team__members.team__members--show .userProfile__thumbnail:after {
+  transform: translate(-50%, -50%) scale(1.2);
+  animation: rainbow-border 1.5s linear infinite;
+}
+@media (max-width: 480px) {
+  .team__members:hover:not(.team__members--show) {
+    display: none !important;
+  }
+}
+.team__details {
+  margin: 0 auto;
+  position: relative;
+  transform: translateX(0%) scale(1, 1);
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  transform-origin: center bottom;
+  transition: transform 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+@media (min-width: 480px) {
+  .team__details {
+    position: absolute;
+    bottom: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%) scale(0, 0);
+  }
+}
+.team__details:after {
+  width: var(--arrowSize);
+  height: var(--arrowSize);
+  position: absolute;
+  top: calc(100% - var(--arrowSize)/2);
+  background-color: #fff;
+  content: " ";
+  transform: rotate(45deg);
+  left: calc(50% - var(--arrowSize)/2);
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+.team__details__summery {
+  border-top: 1px dashed #ccc;
+  padding-top: 15px;
+  font-size: 15px;
+  color: #aeaeae;
+}
+.team__meta {
+  padding-bottom: 15px;
+}
+.team__meta__title {
+  margin: 0px;
+}
+.team__meta__designation {
+  margin-top: 10px;
+}
+
+@keyframes rainbow-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+</style>
+</head>
+
+<body id="body">
+
+	<!-- preloader -->
+	<!-- <div id="preloader">
+				<div class="loder-box">
+					<div class="battery"></div>
+				</div>
+		</div> -->
+	<!-- end preloader -->
+
+<!--
+        Fixed Navigation
+        ==================================== -->
+<header id="navigation" class="fixed-top animated-header">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#body">
+        <img class="img-fluid" src="images/logo.png" alt="STM_IEDC" height="70" width="70">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center" id="nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#body">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#feature">about</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#service">service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#events">events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team">team</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li> -->
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+<!--
+              End Fixed Navigation
+              ==================================== -->
+
+<main class="site-content" role="main">
+
+	<!--
+        Home Slider
+        ==================================== -->
+
+	<section id="home-slider">
+		<div id="slider" class="sl-slider-wrapper">
+
+			<div class="sl-slider">
+
+				<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25"
+				 data-slice1-scale="2" data-slice2-scale="2">
+					<div class="mask-overly"></div>
+					<div class="bg-img slider-1">
+						<div class="slide-caption">
+							<div class="caption-content">
+								<h2 class="animated fadeInDown">
+									IEDC STM | Innovation & Entrepreneurship Development Centre
+								</h2>
+								<p class="animated fadeInDown"></p>
+								<a href="#feature" class="btn btn-blue btn-effect">read more</a>
+													<div class="w3-button">
+						
+							</div>
+						</div>
+					</div>
+					
+					
+
+				</div>
+
+				<!-- <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15"
+				 data-slice1-scale="1.5" data-slice2-scale="1.5">
+					<div class="mask-overly"></div>
+					<div class="bg-img slider-2"></div>
+					<div class="slide-caption">
+						<div class="caption-content">
+							<h2 class="animated fadeInDown">Amazing Business Template For Your Business</h2>
+							<p class="animated fadeInDown">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+								consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui
+								blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+							<a href="#" class="btn btn-blue btn-effect">Join US</a>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3"
+				 data-slice1-scale="2" data-slice2-scale="1">
+					<div class="mask-overly"></div>
+					<div class="bg-img slider-3"></div>
+					<div class="slide-caption">
+						<div class="caption-content">
+							<h2 class="animated fadeInDown">Amazing Business Template For Your Business</h2>
+							<p class="animated fadeInDown">
+								Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
+								feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+								delenit augue duis dolore te feugait nulla facilisi.
+							</p>
+							<a href="#" class="btn btn-blue btn-effect">Join US</a>
+						</div>
+					</div>
+
+				</div> -->
+
+			</div><!-- /sl-slider -->
+<!-- 
+			<nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
+				<a href="javascript:;" class="sl-prev">
+					<i class="fa fa-angle-left fa-3x"></i>
+				</a>
+				<a href="javascript:;" class="sl-next">
+					<i class="fa fa-angle-right fa-3x"></i>
+				</a>
+			</nav> -->
+
+
+			<nav id="nav-dots" class="nav-dots visible-xs visible-sm hidden-md hidden-lg">
+				<span class="nav-dot-current"></span>
+				<span></span>
+				<span></span>
+			</nav>
+
+		</div><!-- /slider-wrapper -->
+	</section>
+
+	<!--
+        End Home SliderEnd
+        ==================================== -->
+
+
+	<section id="feature">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-title text-center">
+						<h2>ABOUT</h2>
+						<p>The Innovation and Entrepreneurship Development Centre (IEDC) is an initiative of Kerala Startup Mission under Startup Bootcamp Scheme of Government of Kerala. Under this scheme financial assistance is given to selected colleges for supporting innovative products and thereby build an entrepreneurial eco-system inside the campus.
+
+							The mission of the IEDCs is to "develop institutional mechanism to create entrepreneurial culture in academic institutions to foster growth of innovation and entrepreneurship amongst the faculty and students ".</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h4>Objectives of the IEDCs:</h4>
+					<p></p>
+					<ul class="list-nav">
+						<li><i class="ion-ios-checkmark-empty"></i>To act as an institutional mechanism for providing various services including information on all aspects of enterprise building to budding S&T entrepreneurs.</li>
+						<li><i class="ion-ios-checkmark-empty"></i>To create Entrepreneurial culture in the Parent Institution and other institutions in the region</li>
+						<li><i class="ion-ios-checkmark-empty"></i>To inculcate a culture of innovation driven entrepreneurship through student projects.</li>
+						<li><i class="ion-ios-checkmark-empty"></i>To catalyse and promote development of S&T knowledge-based enterprises and promote employment opportunities in the innovative areas.</li>
+						<!-- <li><i class="ion-ios-checkmark-empty"></i>Developing Belyse, I thought the strong characters</li> -->
+					</ul>
+				</div>
+				<div class="col-md-8">
+					<img class="img-fluid" src="images/IEDC-Logo.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="prototype">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-title text-center">
+						<h2>Functions of IEDCs:</h2>
+						<p></p>
+						<ul class="list-nav">
+							<li><i class="ion-ios-checkmark-empty"></i>To organise Entrepreneurship Awareness Camps, Entrepreneurship Development Programmes, Faculty Development Programmes and Skill Development Programmes in the college/institution for the benefit of S&T persons.</li>
+							<li><i class="ion-ios-checkmark-empty"></i>To initiate five innovative student projects each year for new innovative product development.</li>
+							<li><i class="ion-ios-checkmark-empty"></i>To guide and assist prospective entrepreneurs on various aspects such as preparing project reports, obtaining project approvals, loans and facilities from agencies of support system, information on technologies, etc.</li>
+							<li><i class="ion-ios-checkmark-empty"></i>To arrange interaction with entrepreneurs and create a mentorship scheme for student entrepreneurs</li>
+							<li><i class="ion-ios-checkmark-empty"></i>To facilitate creation of entrepreneur's club in each college to foster culture of entrepreneurship amongst students</li>
+							<li><i class="ion-ios-checkmark-empty"></i>To arrange industrial visit to understand the present problems faced by the industry and propose innovative solutions.</li>
+							<li><i class="ion-ios-checkmark-empty"></i>To act as a Regional Information Centre on business opportunities, processes, technologies, market, etc. by creating and maintaining relevant data bases.</li>
+							<li><i class="ion-ios-checkmark-empty"></i>IEDCs would also sensitise the management of the institutions regarding the importance of entrepreneurship and integrate their activities with the Host Institutions.</li>
+							
+						</ul>
+					</div>
+				</div>
+				<!-- <div class="col-md-8 mx-auto text-center">
+					<div class="block">
+						<img src="images/prototype.jpg" alt="" class="">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate magni, delectus nam qui deserunt
+							perspiciatis, voluptates ratione. Atque voluptate qui dolor veniam voluptatibus, itaque odit, ullam ipsam
+							exercitationem et ex.</p>
+						<a href="#" class="btn btn-blue btn-effect">Learn More</a>
+
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- about section -->
+	<!-- <section id="services">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-title text-center">
+						<h2>services</h2>
+						<p></p>
+					</div>
+				</div>
+
+				
+				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
+					<div class="about-item">
+						<div class="about-icon">
+							<i class="ion-laptop"></i>
+						</div>
+						<h3>Fully Responsive</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-sm-6 col-xs-12 text-center" data-wow-delay="0.3s">
+					<div class="about-item">
+						<div class="about-icon">
+							<i class="ion-ios-checkmark-outline"></i>
+						</div>
+						<h3>Well Documented</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-sm-6 col-xs-12 text-center ">
+					<div class="about-item">
+						<div class="about-icon">
+							<i class="ion-ios-compose-outline"></i>
+						</div>
+						<h3>Elegant Design</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-sm-6 col-xs-12 text-center" data-wow-delay="0.9s">
+					<div class="about-item">
+						<div class="about-icon">
+							<i class="ion-ios-paperplane-outline"></i>
+						</div>
+						<h3>Bootstrap Based</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
+					<div class="about-item">
+						<div class="about-icon">
+							<i class="ion-laptop"></i>
+						</div>
+						<h3>Fully Responsive</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
+					<div class="about-item">
+						<div class="about-icon">
+							<i class="ion-ios-checkmark-outline"></i>
+						</div>
+						<h3>Well Documented</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
+					<div class="about-item">
+						<div class="about-icon">
+							<i class="ion-ios-compose-outline"></i>
+						</div>
+						<h3>Elegant Design</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
+					<div class="about-item">
+						<div class="about-icon">
+							<i class="ion-ios-paperplane-outline"></i>
+						</div>
+						<h3>Bootstrap Based</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					</div>
+				</div> 
+
+			</div>
+		</div>
+	</section> -->
+	<!-- end about section -->
+
+	<section class="video-bg">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="mx-auto col-md-8">
+					<div class="section-title text-center white">
+						<h2>inaugration</h2>
+						<p>A different way of inaugration of the Innovation and Entrepreneurship Development Center using different mechanisms.. Created by the students of St. Thomas college of Engineering and Technology</p>
+					</div>
+					<div class="modal-section text-center">
+						<a href="#" data-toggle="modal" data-target="#video-modal" class="video-popup-button">
+							<i class="ion-play"></i>
+						</a>
+						<div class="modal fade" id="video-modal" tabindex="-1" role="dialog">
+							<div class="modal-dialog modal-lg" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									</div>
+									<div class="modal-body">
+										<div class="embed-responsive embed-responsive-16by9">
+											<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3Nkm_gZY0o0"></iframe>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<p>Innovation and Entrepreneurship Development Centre (IEDC) was inaugurated by Mr. C Rajan (Chairman, Kerala Dinesh Cooperative Society) by making a call which initiated a contraption mechanism, made by our students, which eventually led to Logo and video launch.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- service section -->
+	<section id="service">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-title text-center">
+						<h2>services</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+							magna aliqua.</p>
+					</div>
+					<ul class="about-filter text-center">
+						<li><a href="#" data-filter="*" class="active">All</a></li>
+						<li><a href="#" data-filter=".photoshop">Photoshop</a></li>
+						<li><a href="#" data-filter=".responsive">Responsive</a></li>
+						<li><a href="#" data-filter=".wordpress">WordPress</a></li>
+						<li><a href="#" data-filter=".illustrator">Illustrator</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row project-wrapper">
+				<div class="col-sm-6 col-md-4 photoshop">
+					<div class="about-item">
+						<img src="images/about/item-1.jpg" class="img-fluid w-100" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat">
+						<figcaption class="mask">
+							<h3>Wall street</h3>
+							<p>Responsive</p>
+						</figcaption>
+						<ul class="external">
+							<li><a class="fancybox" title="Araund The world" data-fancybox-group="works" href="images/about/item-1.jpg"><i
+							class="ion-ios-search"></i></a></li>
+							<li><a href=""><i class="ion-link"></i></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-4 responsive">
+					<div class="about-item">
+						<img src="images/about/item-2.jpg" class="img-fluid w-100" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
+						<figcaption class="mask">
+							<h3>Wall street</h3>
+							<p>Responsive</p>
+						</figcaption>
+						<ul class="external">
+							<li><a class="fancybox" title="Wall street" href="images/about/item-2.jpg" data-fancybox-group="works"><i class="ion-ios-search"></i></a></li>
+							<li><a href=""><i class="ion-link"></i></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-4 wordpress">
+					<div class="about-item">
+						<img src="images/about/item-3.jpg" class="img-fluid w-100" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
+						<figcaption class="mask">
+							<h3>Wall street</h3>
+							<p>Responsive</p>
+						</figcaption>
+						<ul class="external">
+							<li><a class="fancybox" title="Behind The world" data-fancybox-group="works" href="images/about/item-3.jpg"><i
+									 class="ion-ios-search"></i></a></li>
+							<li><a href=""><i class="ion-link"></i></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-4 illustrator">
+					<div class="about-item">
+						<img src="images/about/item-4.jpg" class="img-fluid w-100" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.">
+						<figcaption class="mask">
+							<h3>Wall street</h3>
+							<p>Responsive</p>
+						</figcaption>
+						<ul class="external">
+							<li><a class="fancybox" title="Wall street 4" data-fancybox-group="works" href="images/about/item-4.jpg"><i
+									 class="ion-ios-search"></i></a></li>
+							<li><a href=""><i class="ion-link"></i></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-4 photoshop">
+					<div class="about-item">
+						<img src="images/about/item-5.jpg" class="img-fluid w-100" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
+						<figcaption class="mask">
+							<h3>Wall street</h3>
+							<p>Responsive</p>
+						</figcaption>
+						<ul class="external">
+							<li><a class="fancybox" title="Wall street 5" data-fancybox-group="works" href="images/about/item-5.jpg"><i
+									 class="ion-ios-search"></i></a></li>
+							<li><a href=""><i class="ion-link"></i></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-4 illustrator">
+					<div class="about-item">
+						<img src="images/about/item-6.jpg" class="img-fluid w-100" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
+						<figcaption class="mask">
+							<h3>Wall street</h3>
+							<p>Responsive</p>
+						</figcaption>
+						<ul class="external">
+							<li><a class="fancybox" title="Wall street 6" data-fancybox-group="works" href="images/about/item-6.jpg"><i
+									 class="ion-ios-search"></i></a></li>
+							<li><a href=""><i class="ion-link"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end about section -->
+
+	<!-- past event section -->
+	<section id="events" class="parallax">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-12">
+					<div class="section-title text-center">
+						<h2>upcoming events</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+							magna aliqua.</p>
+					</div>
+				<div class="col-lg-12">
+					<div id="past event" class="">
+						<div class="past event-item text-center">
+							<img class="img-fluid" src="/images/portfolio/item-3.jpg" alt="Our Clients" height="300" width="200">
+														<div class="clearfix">
+														  <br>
+								<span>FOUNDATION SKILLS ON ENTREPRENEURSHIP</span>
+								<p>IEDC in association with ICT Academy and KSUM organized an inter college level 2 days workshop for aspiring students startup on “Foundation skills on Entrepreneurship” on 26th September to 27th September  2018. 32 students from different colleges including STM participated in the workshop</p>
+																	<a href="#feature" class="btn btn-blue btn-effect">read more</a>
+														
+							</div>
+						</div>
+						<br>
+						<div class="past event-item text-center">
+							<img class="img-fluid" src="/images/portfolio/item-4.jpg" alt="Our Clients" height="300" width="200">
+							<div class="clearfix">
+							  <br>
+								<span>START-UP STUDIO LAUNCH</span>
+								<p>I’M Startup Studio was launched at St Thomas College of Engineering and Technology with a vision of nurturing the very idea of entrepreneurship among the tech students on 26th September 2019 from college seminar hall. Dr. Shinu Mathew John (Principal) presided the function and the program was inaugurated by Mr. Nithin Madhavan ( CEO, Kannur Technolodge ). Thereafter he enlightened the students on why the startups need incubators. Mr. Aashin Muhammed (Marketing Manager of Tezzla Electric Bicycle) shared his startup experience with the students. Around 100 students attended the event. 10 students were selected as student ambassadors of startup studio and were awarded a badge.</p>
+																									<a href="#feature" class="btn btn-blue btn-effect">read more</a>
+							</div>
+						</div>
+						<br>
+						<div class="past event-item text-center">
+							<img class="img-fluid" src="/images/portfolio/item-2.jpg" alt="Our Clients" height="300" width="200">
+							<div class="clearfix">
+							  <br>
+								<span>IOT APPLICATION DEVELOPMENT WORKSHOPr</span>
+								<p>IEDC STM, ICT Academy of Kerala in association with Kerala Start-Up Mission is organized a two day workshop on IoT Application Development for IEDC students on 5th March -6th March 2019. This workshop was aimed to create a platform to learn various components, technique, and applications in IoT.  Furthermore it also help the Entrepreneur to build their product with industrial standards.</p>
+																									<a href="#feature" class="btn btn-blue btn-effect">read more</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end past event section -->
+
+	<!-- teams section -->
+	<section id="team">
+		
+			
+	<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-title text-center">
+						<h2>Our Team</h2>
+						<p> Our Great Team Of IEDC Cell, St Thomas College of Engineering & TEchnology, 
+							Who have put their utmost effort to Grow A great Community with Innovative Ideas and 
+						Presenting it on Behalf Of Our College. </p>
+					</div>
+				</div>
+				<div class="container mx-auto py-8">
+		
+					<ul class="team">
+						<li class="team__members">
+						   <div class="userProfile" >
+							<figure class="userProfile__thumbnail">
+							  <img src="images/Anaina CEO.jpeg" alt="Photo" class="userProfile__image">
+							</figure>
+						  
+					
+						  </div>
+						  <div class="team__details">
+							  <header class="team__meta">
+								<h3 class="team__meta__title">Ms. Anaina S.S</h3>
+								<div class="team__meta__designation">CEO, IEDC | STM </div>
+							</header>
+							<div class="team__details__summery">
+								<p> <i class="bx bx-phone-call"></i><a href="tel:+919645726500 " target="_blank"> +91 9645726500 </a></p>
+								<p><i class="bx bx-envelope"></i><a href="mailto:anainass011@gmail.com/" target="_blank">anainass011@gmail.com</a></p>
+								   </div>
+						  </div>
+						</li>
+						<li class="team__members">
+						   <div class="userProfile"  >
+							<figure class="userProfile__thumbnail">
+							  <img src="images/Arpit CMO.jpeg" alt="Photo" class="userProfile__image">
+							</figure>
+						  
+					
+						  </div>
+						  <div class="team__details">
+							  <header class="team__meta">
+								<h3 class="team__meta__title">Stacey Cooper</h3>
+								<div class="team__meta__designation">Software Developer</div>
+							</header>
+							<div class="team__details__summery">
+							  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate exercitationem, consequatur dolores excepturi esse.
+							</div>
+						  </div>
+						</li>
+						
+						<li class="team__members">
+						   <div class="userProfile"  >
+							<figure class="userProfile__thumbnail">
+							  <img src="images/Arpit CMO.jpeg" alt="Photo" class="userProfile__image">
+							</figure>
+						  
+					
+						  </div>
+						  <div class="team__details">
+							  <header class="team__meta">
+								<h3 class="team__meta__title">Bradley Pierce</h3>
+								<div class="team__meta__designation">Software Developer</div>
+							</header>
+							<div class="team__details__summery">
+							  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate exercitationem, consequatur dolores excepturi esse.
+							</div>
+						  </div>
+						</li>
+						<li class="team__members">
+							<div class="userProfile"  >
+							 <figure class="userProfile__thumbnail">
+							   <img src="images/Arpit CMO.jpeg" alt="Photo" class="userProfile__image">
+							 </figure>
+						   
+					 
+						   </div>
+						   <div class="team__details">
+							   <header class="team__meta">
+								 <h3 class="team__meta__title">Bradley Pierce</h3>
+								 <div class="team__meta__designation">Software Developer</div>
+							 </header>
+							 <div class="team__details__summery">
+							   Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate exercitationem, consequatur dolores excepturi esse.
+							 </div>
+						   </div>
+						 </li>
+						<li class="team__members">
+						   <div class="userProfile"  >
+							<figure class="userProfile__thumbnail">
+							  <img src="images/Arpit CMO.jpeg" alt="Photo" class="userProfile__image">
+							</figure>
+						  
+					
+						  </div>
+						  <div class="team__details">
+							  <header class="team__meta">
+								<h3 class="team__meta__title">Heidi Carpenter</h3>
+								<div class="team__meta__designation">Software Developer</div>
+							</header>
+							<div class="team__details__summery">
+							  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate exercitationem, consequatur dolores excepturi esse.
+							</div>
+						  </div>
+						</li>
+						<li class="team__members">
+						   <div class="userProfile" >
+							<figure class="userProfile__thumbnail">
+							  <img src="images/Arpit CMO.jpeg" alt="Photo" class="userProfile__image">
+							</figure>
+						  
+					
+						  </div>
+						  <div class="team__details">
+							  <header class="team__meta">
+								<h3 class="team__meta__title">Jeremy Weaver</h3>
+								<div class="team__meta__designation">Software Developer</div>
+							</header>
+							<div class="team__details__summery">
+							  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate exercitationem, consequatur dolores excepturi esse.
+							</div>
+						  </div>
+						</li>
+						<li class="team__members">
+						   <div class="userProfile"  >
+							<figure class="userProfile__thumbnail">
+							  <img src="images/Arpit CMO.jpeg" alt="Photo" class="userProfile__image">
+							</figure>
+						  
+					
+						  </div>
+						  <div class="team__details">
+							  <header class="team__meta">
+								<h3 class="team__meta__title">Jeanette Harvey</h3>
+								<div class="team__meta__designation">Software Developer</div>
+							</header>
+							<div class="team__details__summery">
+							  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate exercitationem, consequatur dolores excepturi esse.
+							</div>
+						  </div>
+						</li>
+						
+					  </ul>
+			
+					<!-- <div class="flex items-center justify-center flex-wrap gap-4 p-4"> 
+			
+						<div class="card">
+			
+							<img src="images/Anaina CEO.jpeg"  class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+			
+							<div class="text-gray-900 text-lg font-bold">Ms. Anaina S.S</div>
+			
+							<div class="text-purple-600">CEO, IEDC | STM </div>
+							
+							<div class="text-gray-600">
+								<p> <i class="bx bx-phone-call"></i><a href="tel:+919645726500 " target="_blank"> +91 9645726500 </a></p>
+						<p><i class="bx bx-envelope"></i><a href="mailto:anainass011@gmail.com/" target="_blank">anainass011@gmail.com</a></p>
+						   
+						
+							</div>
+						
+							<div class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600">
+								<i class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+								<i class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+								<i class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+							</div>
+			
+						</div>
+			
+						<div class="card">
+			
+							<img src="images/Arpit CMO.jpeg" class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+			
+							<div class="text-gray-900 text-lg font-bold">Mr. Arpith Rameshan</div>
+			
+							<div class="text-purple-600">CTO, IEDC | STM </div>
+							
+							<div class="text-gray-600">
+								<p> <i class="bx bx-phone-call"></i><a href="tel:+919645703000 " target="_blank"> +91 9645703000</a></p>
+								<p><i class="bx bx-envelope"></i><a href="mailto:arpitrameshan777@gmail.com/" target="_blank">arpitrameshan777@gmail.com</a></p>
+							</div>
+						
+							
+							<div class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600">
+								<i class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+								<i class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+								<i class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+							</div>
+			
+						</div>
+			
+						<div class="card">
+			
+							<img src="images/Shahabas.jpeg" class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+			
+							<div class="text-gray-900 text-lg font-bold">Mr. MUHAMMED SHAHABAS T </div>
+			
+							<div class="text-purple-600">CFO, IEDC | STM</div>
+							
+							<div class="text-gray-600">
+								<p> <i class="bx bx-phone-call"></i><a href="tel:+917619318368 " target="_blank"> +91 7619318368</a></p>
+								<p><i class="bx bx-envelope"></i><a href="mailto:shahabas0519@gmail.com/" target="_blank">shahabas0519@gmail.com</a></p>
+						
+							</div>
+					
+							
+							<div class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600">
+								<i class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+								<i class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+								<i class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+							</div>
+			
+						</div>
+			
+						<div class="card">
+			
+							<img src="images/Rishikesh CCO.jpeg" class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+			
+							<div class="text-gray-900 text-lg font-bold">Mr. Rheshikes P K</div>
+			
+							<div class="text-purple-600"> CCO, IEDC | STM </div>
+							
+							<div class="text-gray-600">
+								<p> <i class="bx bx-phone-call"></i><a href="tel:+918137945196  " target="_blank">+91 8137945196 </a></p>
+								<p><i class="bx bx-envelope"></i><a href="mailto:rheshikespk@gmail.com /" target="_blank">rheshikespk@gmail.com </a></p>
+						
+							</div>
+					
+							
+							<div class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600">
+								<i class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+								<i class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+								<i class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+							</div>
+			
+						</div>
+			
+						<div class="card">
+			
+							<img src="images/Naveed.jpeg" class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+			
+							<div class="text-gray-900 text-lg font-bold">Mr. Mohammed Naveed P V</div>
+			
+							<div class="text-purple-600"> CMO, IEDC | STM </div>
+							
+							<div class="text-gray-600">
+						<p> <i class="bx bx-phone-call"></i><a href="tel:+919746108083 " target="_blank"> +91 9746108083 </a></p>
+						<p><i class="bx bx-envelope"></i><a href="mailto:naveedpv348@gmail.com/" target="_blank">naveedpv348@gmail.com</a></p>
+						   
+							</div>
+						
+							<div class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600">
+								<i class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+								<i class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+								<i class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+							</div>
+			
+						</div>
+			
+						<div class="card">
+			
+							<img src="images/Neeha.jpeg" class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+			
+							<div class="text-gray-900 text-lg font-bold"> Ms. Neeha Shirin K P</div>
+			
+							<div class="text-purple-600"> CSO, IEDC | STM </div>
+							
+							<div class="text-gray-600">
+								<p> <i class="bx bx-phone-call"></i><a href="tel:+919207620104 " target="_blank"> +91 9207620104 </a></p>
+								<p><i class="bx bx-envelope"></i><a href="mailto:neehasherin987@gmail.com/" target="_blank"> neehasherin987@gmail.com </a></p>
+						
+							</div>
+					
+							<div class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600">
+								<i class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+								<i class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+								<i class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+							</div>
+			
+						</div>
+			
+						<div class="card">
+			
+							<img src="images/RASI COO.jpeg" class="w-24 h-24 rounded-full object-cover transition duration-200 hover:scale-110">
+			
+							<div class="text-gray-900 text-lg font-bold"> Mr. Muhammed Rasi K P</div>
+			
+							<div class="text-purple-600"> COO, IEDC | STM </div>
+							
+							<div class="text-gray-600">
+								<p> <i class="bx bx-phone-call"></i><a href="tel:+919605942261" target="_blank"> +91 9605942261 </a></p>
+								<p><i class="bx bx-envelope"></i><a href="mailto:rasi239@gmail.com/" target="_blank">  rasi239@gmail.com </a></p>
+						
+							</div>
+						
+							<div class="flex items-center justify-center gap-3 mt-2 w-auto h-5 text-gray-600">
+								<i class="fa-brands fa-twitter fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+								<i class="fa-brands fa-linkedin fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+								<i class="fa-brands fa-dribbble fa-lg cursor-pointer transition duration-200 hover:text-gray-400"></i>
+							</div>
+			
+						</div>
+			
+						
+			
+					</div>
+			
+				</div>
+			
+
+			</div>
+		</div> -->
+	</section>
+
+	<!-- end teams section -->
+
+	<!-- <section id="google-map">
+		<div id="map-canvas" class="wow animated fadeInUp"></div>
+	</section>	<section id="google-map">
+		<div id="map-canvas" class="wow animated fadeInUp"></div>
+	</section> -->
+
+</main>
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h4>
+          <a href="">
+            <img class="img-responsive" src="images/logo.png" alt="">
+          </a>
+        </h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias ullam numquam repudiandae repellat ex autem
+          voluptas vel esse quo excepturi!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, repellendus.</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Terms And Condition</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4>newsletter signup</h4>
+        <p>You will be among the first to know about hot new software and great deals on stuff to enhance and promote</p>
+        <form action="#" method="post" class="subscribe-form wow animated fadeInUp">
+          <div class="input-field">
+            <input type="email" class="subscribe form-control" placeholder="Enter Your Email...">
+            <button type="submit" class="submit-icon">
+              <i class="fa fa-paper-plane fa-lg"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</footer>
+<section id="footer-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="text-center text-lg-left">
+          COPYRIGHT © 2016 , BLUE PRO | DIGITAL AGENCY
+        </p>
+      </div>
+      <div class="col-md-6 text-right">
+        <p class="text-center text-lg-left">
+          Design and Developed By <a href="#">Themefisher</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Essential jQuery Plugins
+		================================================== -->
+	<!-- Main jQuery -->
+	<script src="plugins/jquery-1.11.1.min.js"></script>
+	<!-- Twitter Bootstrap -->
+	<script src="plugins/bootstrap/bootstrap.min.js"></script>
+	<!-- Single Page Nav -->
+	<script src="plugins/jquery.singlePageNav.min.js"></script>
+	<!-- jquery.fancybox.pack -->
+	<script src="plugins/jquery.fancybox.pack.js"></script>
+	<!-- Owl Carousel -->
+	<script src="plugins/owl.carousel.min.js"></script>
+	<!-- jquery easing -->
+	<script src="plugins/isotope.pkgd.min.js"></script>
+	<script src="plugins/jquery.easing.min.js"></script>
+	<!-- Fullscreen slider -->
+	<script src="plugins/jquery.slitslider.js"></script>
+	<script src="plugins/jquery.ba-cond.min.js"></script>
+	<!-- onscroll animation -->
+	<script src="plugins/wow.min.js"></script>
+	<!-- Custom Functions -->
+	<script src="plugins/jquery.form.min.js"></script>
+	<script src="plugins/jquery.validate.min.js"></script>
+	<!-- Google Map -->
+	<!-- Google Map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI14J_PNWVd-m0gnUBkjmhoQyNyd7nllA"></script>
+	<script src="plugins/gmap.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		$(function () {
+			$("#teams-form").validate({
+				rules: {
+					name: {
+						required: true,
+						minlength: 2
+					},
+					email: {
+						required: true,
+						email: true
+					},
+					subject: {
+						required: true,
+						minlength: 2
+					},
+					message: {
+						required: true,
+						minlength: 2
+					}
+				},
+				messages: {
+					name: {
+						required: "come on, you have a name don't you?",
+						minlength: "your name must consist of at least 2 characters"
+					},
+					email: {
+						required: "no email, no support"
+					},
+					subject: {
+						required: "you have a reason to teams, write it here",
+						minlength: "thats all? really?"
+					},
+					message: {
+						required: "um...yea, you have to write something to send this form.",
+						minlength: "thats all? really?"
+					}
+				},
+				submitHandler: function (form) {
+					$(form).ajaxSubmit({
+						type: "POST",
+						data: $(form).serialize(),
+						url: "mail.php",
+						success: function () {
+							console.log('done');
+							$(".teams-form").fadeTo("slow", 1, function () {
+								$(".teams-form").resetForm();
+								$(".success-ms").slideDown("slow");
+							});
+						},
+						error: function () {
+							console.log('error');
+							$(".teams-form").fadeTo("slow", 1, function () {
+								$(".error-ms").slideDown("slow");
+							});
+						}
+					});
+				},
+				errorPlacement: function (error, element) {
+					element.after(error);
+					error.hide().slideDown();
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>
